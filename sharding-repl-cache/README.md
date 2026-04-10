@@ -151,3 +151,9 @@ docker exec -it shard1_1 mongosh --port 27018 --eval "rs.status()"
 ```shell
 docker exec -it mongos_router mongosh --port 27020 --eval "sh.status()"
 ```
+
+## Проверка кеширования
+
+```shell
+curl -w "\n%{time_total}\n" http://localhost:8080/helloDoc/users
+```
